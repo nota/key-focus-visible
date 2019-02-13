@@ -6,7 +6,7 @@ Alternatively, `:focus-visible` [polyfill](https://www.npmjs.com/package/focus-v
 Here are advantages compared to the polifill:
 
 - Easy to debug the stylesheets on Chrome.
-- Works well with React or Vue since it doesn't change the DOM of each element.
+- Does not conflict with React or Vue since it doesn't change the DOM of each element.
 - Code is simpler.
 
 Detailed behavior:
