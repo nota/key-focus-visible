@@ -1,0 +1,16 @@
+{
+  "name": "key-focus-stylist",
+  "version": "0.0.1",
+  "private": false,
+  "engines": {
+    "node": "10.12.0",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "12.0.1"
+  }
+}

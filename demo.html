@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <title>Key Focus Visible Demo</title>
+    <script defer="true" src="index.js" ></script>
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <h1>Key Focus Visible Demo</h1>
+    <p>What to check:</p>
+    <ul>
+      <li>Press tab key then you can see the focus ring on all controls.</li>
+      <ul>
+        <li>On Safari, you need to change the accessibility settings.</li>
+      </ul>
+      <li>Click or tap controls then you can see the focus ring only on the text inputs.</li>
+    </ul>
+    <p>To get beautiful CSS with more browser's compatibility, checkout our design system or make your own stylesheets.</p>
+    <form class="form">
+      <div class="form-group">
+        <input class="form-control" type="text" value="Sample" />
+      </div>
+      <div class="form-group">
+        <label for="radio1">
+          <input class="radio" id="radio1" type="radio" name="radio" value="1" />
+          Option 1
+        </label>
+        <label for="radio2">
+          <input class="radio" id="radio2" type="radio" name="radio" value="2" />
+          Option 2
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="checkbox1">
+          <input class="checkbox" id="checkbox1" type="checkbox" name="checkbox" value="1" />
+          Checkbox 1
+        </label>
+      </div>
+      <div class="form-group">
+        <select class="form-control" >
+          <option>Select A</option>
+          <option>Select B</option>
+          <option>Select C</option>
+          <option>Select D</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" name="comment" rows="4" cols="40"></textarea>
+      </div>
+
+      <div class="form-group">
+        <a href='./demo.html'>Text Link</a>
+        <a href='./demo.html'>Text Link2</a>
+      </div>
+
+
+      <div class="form-group">
+        <button class="button" type="submit">Submit</button>
+        <button class="button" type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
