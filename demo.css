@@ -7,7 +7,7 @@
   outline: none;
 }
 
-[data-key-focus] *:focus {
+[data-focus-visible] *:focus {
   box-shadow: 0 0 0px 4px rgba(64, 167, 255, 0.6);
   border-color: rgb(64, 167, 255);
   outline: none;
@@ -53,8 +53,8 @@ textarea.form-control {
   height: auto;
 }
 
-[data-key-focus] .radio:focus,
-[data-key-focus] .checkbox:focus {
+[data-focus-visible] .radio:focus,
+[data-focus-visible] .checkbox:focus {
   outline: 4px solid rgba(64, 167, 255, 0.6);
 }
 

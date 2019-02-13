@@ -1,9 +1,20 @@
 # Key focus visible
 
-This small library enables you to show CSS `:focus` pseudo-class only when triggered by the keyboard.
+This library allows you to show CSS `:focus` pseudo-class only when triggered by the keyboard.
 
-Alternatively, `:focus-visible` [polyfill](https://www.npmjs.com/package/focus-visible) is available, but ours is easier to debug on Chrome.
-Since it doesn't change the DOM of each element, it works well with React or Vue.
+Alternatively, `:focus-visible` [polyfill](https://www.npmjs.com/package/focus-visible) is available.
+Here are advantages compared to the polifill:
+
+- Easy to debug the stylesheets on Chrome.
+- Works well with React or Vue since it doesn't change the DOM of each element.
+- Code is simpler.
+
+Detailed behavior:
+
+- Works well when the focus is returned after you close the modal/dropdown by the mouse or keyboard.
+- Works well when the focus is given programmatically.
+
+In both cases, we remember the last used input device to focus, and if it was a keyboard, focus is shown, if it was a pointing device, focus is not shown.
 
 ### Install
 
@@ -25,7 +36,7 @@ So you can apply the style as follows:
   outline: none;
 }
 
-[data-key-focus] *:focus {
+[data-focus-visible] *:focus {
   box-shadow: 0 0 0px 4px rgba(64, 167, 255, 0.6);
 }
 ```
@@ -38,7 +49,7 @@ You can also use it in Sass:
 
   &:active,
   &:hover,
-  [data-key-focus] &:focus {
+  [data-focus-visible] &:focus {
     background-color: #ccc;
   }
 }

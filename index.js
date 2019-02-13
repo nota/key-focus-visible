@@ -4,7 +4,7 @@
 
   // list of modifier keys commonly used with the mouse and
   // can be safely ignored to prevent false keyboard detection
-  const ignoreMap = [
+  const modifierKeys = [
     16, // shift
     17, // control
     18, // alt
@@ -46,26 +46,26 @@
   }
 
   function onKeyDown (event) {
-    if (ignoreMap.indexOf(event.which) > -1) return
+    if (modifierKeys.indexOf(event.which) > -1) return
     wasKeyboardInput = true
   }
 
   function updateDoc () {
     const body = document.body
     if (wasKeyboardInput) {
-      body.dataset.keyFocus = ''
+      body.dataset.focusVisible = ''
     } else {
-      delete body.dataset.keyFocus
+      delete body.dataset.focusVisible
     }
-    // add class that can not apply css with [data-key-focus] syntax
+    // add class that can not apply css with [data-focus-visible] selector
     // eg: input[type="range"]:focus::-webkit-slider-thumb
-    const elements = document.querySelectorAll('[data-require-key-focus-class]')
+    const elements = document.querySelectorAll('[data-require-focus-visible-class]')
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i]
       if (wasKeyboardInput) {
-        element.classList.add('key-focus')
+        element.classList.add('focus-visible')
       } else {
-        element.classList.remove('key-focus')
+        element.classList.remove('focus-visible')
       }
     }
   }
