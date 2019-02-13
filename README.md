@@ -2,8 +2,8 @@
 
 This small library enables you to show CSS `:focus` pseudo-class only when triggered by the keyboard.
 
-Alternatively, `:focus-visible` [polyfill](https://www.npmjs.com/package/focus-visible) is available, but this one is easier to debug on Chrome.
-Also this one does not change each element's DOM, so it works well with React or Vue.
+Alternatively, `:focus-visible` [polyfill](https://www.npmjs.com/package/focus-visible) is available, but ours is easier to debug on Chrome.
+Since it doesn't change the DOM of each element, it works well with React or Vue.
 
 ### Install
 
