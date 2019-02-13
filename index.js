@@ -14,20 +14,18 @@
   ]
 
   // check support for passive event listeners
-  const supportsPassive = () => {
+  function supportsPassive () {
     let exist = false
     try {
       const opts = Object.defineProperty({}, 'passive', {
-        get: () => {
-          exist = true
-        }
+        get: function () { exist = true }
       })
       window.addEventListener('test', null, opts)
     } catch (e) {}
     return exist
   }
 
-  const init = () => {
+  function init () {
     // set useCapture to true to capture all events
     // some components like Boostrap Dropdown menu call stopPropagate()
     const useCapture = true
@@ -43,17 +41,17 @@
     window.addEventListener('focusin', updateDoc, useCapture)
   }
 
-  const onPointerDown = () => {
+  function onPointerDown () {
     wasKeyboardInput = false
   }
 
-  const onKeyDown = (event) => {
+  function onKeyDown (event) {
     if (ignoreMap.indexOf(event.which) > -1) return
     wasKeyboardInput = true
   }
 
-  const updateDoc = () => {
-    const { body } = document
+  function updateDoc () {
+    const body = document.body
     if (wasKeyboardInput) {
       body.dataset.keyFocus = ''
     } else {
@@ -62,7 +60,8 @@
     // add class that can not apply css with [data-key-focus] syntax
     // eg: input[type="range"]:focus::-webkit-slider-thumb
     const elements = document.querySelectorAll('[data-require-key-focus-class]')
-    for (const element of elements) {
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i]
       if (wasKeyboardInput) {
         element.classList.add('key-focus')
       } else {

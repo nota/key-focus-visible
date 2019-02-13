@@ -1,7 +1,6 @@
 {
-  "name": "key-focus-stylist",
+  "name": "key-focus-visible",
   "version": "0.0.1",
-  "private": false,
   "engines": {
     "node": "10.12.0",
     "npm": "6.x"

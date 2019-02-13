@@ -1,26 +1,24 @@
 # Key focus visible
 
-This small library enables you to show `:focus` pseudo-class style when only triggered by the keyboard.
+This small library enables you to show CSS `:focus` pseudo-class only when triggered by the keyboard.
 
-focus-visible wrapper is more famous, but this one is easier to debug on Chrome.
-Also this one does not change the each elements's DOM, so it works well with React or Vue.
+Alternatively, `:focus-visible` [polyfill](https://www.npmjs.com/package/focus-visible) is available, but this one is easier to debug on Chrome.
+Also this one does not change each element's DOM, so it works well with React or Vue.
 
 ### Install
 
-`$ install npm key-focus-visible`
+`$ npm install key-focus-visible`
 
 ### How to use
 
-Just import this library to your project.
+Just import/require this library to your project.
 
 ```js
-import 'key-focus-stylist'
+import 'key-focus-visible'
 ```
 
-It sets `data-key-focus` attribute on `body` element when the focus has been given by the keyboard.
-
+It sets `data-key-focus` attribute on `body` element when the focus is given by the keyboard.
 So you can apply the style as follows:
-
 
 ```css
 *:focus {
@@ -30,9 +28,32 @@ So you can apply the style as follows:
 [data-key-focus] *:focus {
   box-shadow: 0 0 0px 4px rgba(64, 167, 255, 0.6);
 }
+```
 
+You can also use it in Sass:
+
+```scss
+.foo-component {
+  background-color: #fff;
+
+  &:active,
+  &:hover,
+  [data-key-focus] &:focus {
+    background-color: #ccc;
+  }
+}
 ```
 
 ### Demo
 
-See the live demo [here](./demo.html)
+See the live demo [here](https://nota.github.io/key-focus-visible/demo.html)
+
+### Compatibility
+
+Suports ordinary modern dekstop browsers (Chrome, Firefox, Safari, Opera, Edge) and mobile browsers (Chrome for Android, iOS Safari)
+
+Does not throw error on IE.
+
+### License
+
+This software is released under the MIT License, see LICENSE.
