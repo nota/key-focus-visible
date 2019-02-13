@@ -2,8 +2,6 @@
   // is keyboard last used input source?
   let wasKeyboardInput = false
 
-  // list of modifier keys commonly used with the mouse and
-  // can be safely ignored to prevent false keyboard detection
   const modifierKeys = [
     16, // shift
     17, // control
@@ -13,8 +11,7 @@
     93 // Windows menu / right Apple cmd
   ]
 
-  // check support for passive event listeners
-  function supportsPassive () {
+  function supportsPassiveEvent () {
     let exist = false
     try {
       const opts = Object.defineProperty({}, 'passive', {
@@ -29,7 +26,7 @@
     // set useCapture to true to capture all events
     // some components like Boostrap Dropdown menu call stopPropagate()
     const useCapture = true
-    const options = supportsPassive()
+    const options = supportsPassiveEvent()
       ? { passive: true, capture: useCapture }
       : useCapture
 

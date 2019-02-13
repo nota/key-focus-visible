@@ -28,7 +28,7 @@ Just import/require this library to your project.
 import 'key-focus-visible'
 ```
 
-It sets `data-key-focus` attribute on `body` element when the focus is given by the keyboard.
+It sets `data-focus-visible` attribute on `body` element when the focus is given by the keyboard.
 So you can apply the style as follows:
 
 ```css
