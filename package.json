@@ -1,9 +1,31 @@
 {
-  "name": "key-focus-visible",
+  "name": "@notainc/key-focus-visible",
   "version": "0.0.1",
+  "description": "This library allows you to show CSS :focus pseudo-class only when triggered by the keyboard.",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/nota/key-focus-visible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nota/key-focus-visible/issues"
+  },
+  "homepage": "https://github.com/nota/key-focus-visible",
+  "keywords": [
+    "css",
+    "focus",
+    "pseudo"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "README.md",
+    "index.js",
+    "package.json",
+    "LICENSE"
+  ],
   "engines": {
     "node": "10.12.0",
-    "npm": "6.x"
+    "npm": ">= 6.x"
   },
   "scripts": {
     "test": "standard"
