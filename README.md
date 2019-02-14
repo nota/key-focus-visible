@@ -18,14 +18,14 @@ In both cases, we remember the last used input device to focus, and if it was a 
 
 ### Install
 
-`$ npm install key-focus-visible`
+`$ npm install @notainc/key-focus-visible`
 
 ### How to use
 
 Just import/require this library to your project.
 
 ```js
-import 'key-focus-visible'
+import '@notainc/key-focus-visible'
 ```
 
 It sets `data-focus-visible` attribute on `body` element when the focus is given by the keyboard.
