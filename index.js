@@ -1,8 +1,8 @@
 (function () {
   // is keyboard last used input source?
-  let wasKeyboardInput = false
+  var wasKeyboardInput = false
 
-  const modifierKeys = [
+  var modifierKeys = [
     16, // shift
     17, // control
     18, // alt
@@ -12,9 +12,9 @@
   ]
 
   function supportsPassiveEvent () {
-    let exist = false
+    var exist = false
     try {
-      const opts = Object.defineProperty({}, 'passive', {
+      var opts = Object.defineProperty({}, 'passive', {
         get: function () { exist = true }
       })
       window.addEventListener('test', null, opts)
@@ -25,8 +25,8 @@
   function init () {
     // set useCapture to true to capture all events
     // some components like Boostrap Dropdown menu call stopPropagate()
-    const useCapture = true
-    const options = supportsPassiveEvent()
+    var useCapture = true
+    var options = supportsPassiveEvent()
       ? { passive: true, capture: useCapture }
       : useCapture
 
@@ -48,7 +48,7 @@
   }
 
   function updateDoc () {
-    const body = document.body
+    var body = document.body
     if (wasKeyboardInput) {
       body.dataset.focusVisible = ''
     } else {
@@ -56,9 +56,9 @@
     }
     // add class that can not apply css with [data-focus-visible] selector
     // eg: input[type="range"]:focus::-webkit-slider-thumb
-    const elements = document.querySelectorAll('[data-require-focus-visible-class]')
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i]
+    var elements = document.querySelectorAll('[data-require-focus-visible-class]')
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i]
       if (wasKeyboardInput) {
         element.classList.add('focus-visible')
       } else {
