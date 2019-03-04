@@ -66,7 +66,7 @@
       }
     }
   }
-  if (document.readyState === 4) {
+  if (document.readyState === 'complete') {
     init()
   } else {
     document.addEventListener('load', init)
