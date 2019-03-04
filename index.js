@@ -66,9 +66,9 @@
       }
     }
   }
-  if (document.readyState === 'complete') {
+  if (document.readyState === 'interactive'){
     init()
   } else {
-    document.addEventListener('load', init)
+    document.addEventListener('DOMContentLoaded', init)
   }
 })()
