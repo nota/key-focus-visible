@@ -66,7 +66,7 @@
       }
     }
   }
-  if (document.readyState === 'interactive'){
+  if (document.readyState === 'interactive') {
     init()
   } else {
     document.addEventListener('DOMContentLoaded', init)
