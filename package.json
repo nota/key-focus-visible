@@ -24,7 +24,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "prepublishOnly": "npm test"
   },
   "dependencies": {},
   "devDependencies": {
