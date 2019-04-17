@@ -23,10 +23,6 @@
     "package.json",
     "LICENSE"
   ],
-  "engines": {
-    "node": ">= 8.x",
-    "npm": ">= 5.x"
-  },
   "scripts": {
     "test": "standard"
   },
