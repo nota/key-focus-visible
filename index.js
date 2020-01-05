@@ -34,8 +34,8 @@
     if ('ontouchstart' in window) {
       window.addEventListener('touchstart', onPointerDown, options)
     }
-    window.addEventListener('keydown', onKeyDown, useCapture)
-    window.addEventListener('focusin', updateDoc, useCapture)
+    window.addEventListener('keydown', onKeyDown, options)
+    window.addEventListener('focusin', updateDoc, options)
   }
 
   function onPointerDown () {
